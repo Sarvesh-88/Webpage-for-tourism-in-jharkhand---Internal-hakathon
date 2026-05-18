@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trip Planning Form</title>
+    <link rel="stylesheet" href="4th.css" />
+  </head>
+  <body>
+    <form action="submit_trip.html" method="POST">
+      <h2>Plan Your Trip</h2>
+
+      <div class="form-section">
+        <div class="form-container">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+            required
+          />
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="e.g. +91 0123456789"
+            required
+          />
+
+          <label for="group-size">Group Size</label>
+          <select id="group-size" name="group_size" required>
+            <option value="" disabled selected>Select group size</option>
+            <option value="1">1 (Solo)</option>
+            <option value="2-4">2-4</option>
+            <option value="5-10">5-10</option>
+            <option value="10+">More than 10</option>
+          </select>
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-container">
+          <label for="destination">Trip Destination</label>
+          <select id="destination" name="destination" required>
+            <option value="" disabled selected>
+              Select a famous place in Jharkhand
+            </option>
+            <option value="netarhat">Netarhat</option>
+            <option value="betla-national-park">Betla National Park</option>
+            <option value="deoghar">Deoghar</option>
+            <option value="ranchi-waterfalls">Ranchi Waterfalls</option>
+            <option value="parasnath-hill">Parasnath Hill</option>
+            <option value="majestic-palaces">Majestic Palaces</option>
+          </select>
+
+          <label for="budget">Budget Range (INR)</label>
+          <select id="budget" name="budget_range" required>
+            <option value="" disabled selected>Select budget range</option>
+            <option value="under-20000">Under ₹20,000</option>
+            <option value="20000-50000">₹20,000 - ₹50,000</option>
+            <option value="50000-100000">₹50,000 - ₹1,00,000</option>
+            <option value="above-100000">Above ₹1,00,000</option>
+          </select>
+
+          <label for="start-date">Start Date</label>
+          <input type="date" id="start-date" name="start_date" required />
+
+          <label for="end-date">End Date</label>
+          <input type="date" id="end-date" name="end_date" required />
+        </div>
+      </div>
+
+      <div class="checkbox-groups">
+        <div class="checkbox-group">
+          <legend>Interests</legend>
+          <label class="container"
+            >Trekking
+            <input type="checkbox" name="interests" value="trekking" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Sightseeing
+            <input type="checkbox" name="interests" value="sightseeing" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Culture
+            <input type="checkbox" name="interests" value="culture" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Wildlife
+            <input type="checkbox" name="interests" value="wildlife" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Shopping
+            <input type="checkbox" name="interests" value="shopping" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Adventure Sports
+            <input type="checkbox" name="interests" value="adventure-sports" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="checkbox-group">
+          <legend>Preferred Activities</legend>
+          <label class="container"
+            >Guided Tour
+            <input type="checkbox" name="activities" value="guided-tour" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Photography
+            <input type="checkbox" name="activities" value="photography" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Camping
+            <input type="checkbox" name="activities" value="camping" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Local Food Tasting
+            <input
+              type="checkbox"
+              name="activities"
+              value="local-food-tasting"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Shopping at Bazaars
+            <input type="checkbox" name="activities" value="shopping-bazaars" />
+            <span class="checkmark"></span>
+          </label>
+          <label for="special-requirements">Special Requirements</label>
+          <textarea
+            id="special-requirements"
+            name="special_requirements"
+            placeholder="Any special needs or requests?"
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit" onclick="alert('Your Response Submited...')">Submit Your Request</button>
+    </form>
+  </body>
+</html>
